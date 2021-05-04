@@ -61,5 +61,5 @@
     "devDependencies": {
         "eslint-plugin-prettier": "^3.1.4"
     },
-    "proxy": "http://localhost:3000"
+    "proxy": "http://localhost:5000"
 }
