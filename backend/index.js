@@ -37,9 +37,13 @@ app.use('/api/questionnaire-responses', questionnaireResponsesRouter);
 app.use('/api/questionnaires', questionnairesRouter);
 app.use('/api/translatedContent', translatedContentRouter);
 app.use('/api/generateExcel', generateResponsesExcelRouter);
+app.get('/test-route', (req, res) => {
+    res.status(200).json({
+        message: 'it worked',
+    });
+});
 
 app.get('/*', (req, res) => {
-    console.log('in index js');
     res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
 });
 
