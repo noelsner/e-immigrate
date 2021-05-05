@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const mongoose = require('mongoose');
 const usersRouter = require('./routes/users');
 const adminsRouter = require('./routes/admins');
@@ -14,6 +15,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '..', 'build')));
 
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri, {
@@ -35,6 +37,11 @@ app.use('/api/questionnaire-responses', questionnaireResponsesRouter);
 app.use('/api/questionnaires', questionnairesRouter);
 app.use('/api/translatedContent', translatedContentRouter);
 app.use('/api/generateExcel', generateResponsesExcelRouter);
+
+app.get('/*', (req, res) => {
+    console.log('in index js');
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+});
 
 const port = process.env.PORT || 5000;
 
