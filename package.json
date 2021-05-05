@@ -33,7 +33,7 @@
         "read-excel-file": "^4.1.0"
     },
     "scripts": {
-        "start": "node backend/index.js",
+        "start": "node backend/index.js & react-scripts start",
         "start:dev": "nodemon backend/index.js & react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
