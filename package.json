@@ -33,7 +33,7 @@
         "read-excel-file": "^4.1.0"
     },
     "scripts": {
-        "start": "backend/index.js",
+        "start": "node backend/index.js",
         "start:dev": "nodemon backend/index.js & react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -61,5 +61,5 @@
     "devDependencies": {
         "eslint-plugin-prettier": "^3.1.4"
     },
-    "proxy": "http://localhost:5000/"
+    "proxy": "http://localhost:5000"
 }
