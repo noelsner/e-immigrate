@@ -5,18 +5,19 @@ import { isAfter } from 'date-fns';
 import './Modal.css';
 
 const checkEligibility = (userDate, question2, history, content) => {
-    const cutoffDate = new Date();
-    const marriedDate = new Date(content.screeningDateMarried);
-    const nonMarriedDate = new Date(content.screeningDate);
+    // const marriedDate = new Date(content.screeningDateMarried);
+    // const nonMarriedDate = new Date(content.screeningDate);
 
     if (question2 === 'Yes') {
-        if (isAfter(userDate, marriedDate)) {
+        // if (isAfter(userDate, marriedDate)) { //remove cutoff date to make demonstration of site simpler
+        if (!userDate) {
             return <div className="Reason">{content.modalText3}</div>;
         } else {
             return history.push('/overview');
         }
     } else {
-        if (isAfter(userDate, nonMarriedDate)) {
+        // if (isAfter(userDate, nonMarriedDate)) { //remove cutoff date to make demonstration of site simpler
+        if (!userDate) {
             return <div className="Reason">{content.modalText4}</div>;
         } else {
             return history.push('/overview');

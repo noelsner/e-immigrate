@@ -12,6 +12,7 @@ import WorkshopScreening from '../../compositions/WorkshopScreening/WorkshopScre
 import ProcessOverview from '../../compositions/ProcessOverview/ProcessOverview';
 import { workshopTitle } from '../../data/LanguageOptions';
 import Confirmation from '../../compositions/Confirmation/Confirmation';
+import Banner from '../../components/Banner/Banner';
 
 import './MainContainer.css';
 import ProgressBar from '../../compositions/ProgressBar/ProgressBar';
@@ -40,6 +41,7 @@ const MainContainer = () => {
         languageCode: language,
     });
     const [content, setContent] = useState(LOCALSTORE_CONTENT);
+    const [banner, setBanner] = useState(true);
 
     let history = useHistory();
     const browserLanguage =
@@ -120,6 +122,7 @@ const MainContainer = () => {
         answeredQuestion[slug] = answer;
         setQuestionnaireResponse(answeredQuestion);
     };
+
     return (
         <div className="MainContainer">
             <div className="wrapper">
@@ -130,6 +133,7 @@ const MainContainer = () => {
                     setShowModal={setShowModal}
                 />
                 <div className={`items ${showModal ? 'blur' : ''}`}>
+                    {banner && <Banner setBanner={setBanner} />}
                     <Navbar
                         language={language}
                         setLanguage={changeLanguage}
