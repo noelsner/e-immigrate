@@ -1,4 +1,4 @@
-# Project New Citizen
+# [Project New Citizen](http://ciit.herokuapp.com)
 
 Project New Citizen is a web application created for the Center for Employment Training Immigration and Citizenship Program (CET-ICP) in collaboration with Code for San Jose.
 
