@@ -1,0 +1,218 @@
+.AdminDashboard {
+    margin: 0 10%;
+}
+.AdminDashboard .loading {
+    position: absolute;
+    z-index: 10;
+    font-size: 40px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.AdminDashboard .responses {
+    /* border: solid 1px #efefef; */
+    display: grid;
+}
+
+.AdminDashboard table {
+    border-collapse: collapse;
+    table-layout: auto;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.AdminDashboard .responses tbody tr .contact-with-police {
+    text-align: left;
+    font-size: 0.7em;
+    width: 200px;
+}
+.AdminDashboard .responses tbody tr .contact-with-police-explain {
+    text-align: left;
+    font-size: 0.7em;
+    width: 300px;
+}
+.AdminDashboard .responses tbody tr td,
+.AdminDashboard .responses tbody tr th {
+    border-bottom: solid 1px #efefef;
+    height: 32px;
+    overflow-x: scroll;
+}
+
+.AdminDashboard .responses th:nth-child(1),
+.AdminDashboard .responses td:nth-child(1) {
+    min-width: 40px;
+}
+
+.AdminDashboard .responses th:nth-child(2),
+.AdminDashboard .responses td:nth-child(2) {
+    min-width: 52px;
+}
+
+.AdminDashboard .responses th:nth-child(3),
+.AdminDashboard .responses td:nth-child(3) {
+    min-width: 96px;
+}
+
+.AdminDashboard .responses th:nth-child(4),
+.AdminDashboard .responses td:nth-child(4) {
+    min-width: 104px;
+}
+
+.AdminDashboard .responses th:nth-child(5),
+.AdminDashboard .responses td:nth-child(5) {
+    min-width: 120px;
+}
+
+.AdminDashboard .responses th,
+.AdminDashboard .responses td {
+    padding: 8px;
+    text-align: center;
+}
+
+.AdminDashboard .responses th {
+    color: var(--color-primary);
+}
+
+.AdminDashboard .responses th svg {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.AdminDashboard .responses th .up {
+    transform: rotate(180deg);
+}
+
+.AdminDashboard .checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.AdminDashboard .all-answers {
+    display: grid;
+    grid-gap: 16px;
+
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(1fr, 160px);
+    width: 700px;
+    overflow-x: scroll;
+}
+.AdminDashboard .all-answers .answer {
+    width: 100%;
+    padding: 6px;
+    align-self: center;
+    min-height: 40px;
+}
+
+.AdminDashboard .green {
+    background-color: var(--color-green);
+}
+.AdminDashboard .red {
+    background-color: var(--color-red);
+}
+
+.AdminDashboard .flag {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    margin: auto;
+}
+.AdminDashboard .green-outline {
+    border: solid 1px var(--color-green);
+}
+.AdminDashboard .red-outline {
+    border: solid 1px var(--color-red);
+}
+
+.AdminDashboard .dashboard-section-title {
+    font-weight: 800;
+    margin: 2rem 0 1rem;
+}
+
+.AdminDashboard .dashboard-card {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    height: 148px;
+}
+
+.AdminDashboard .flag-dashboard-card {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 4px;
+}
+
+.AdminDashboard .flag-dashboard-card div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AdminDashboard .dashboard-card .text-red {
+    color: var(--color-red);
+}
+
+.AdminDashboard .dashboard-card .text-green {
+    color: var(--color-green);
+}
+
+.AdminDashboard .dashboard-card .bold {
+    font-weight: 700;
+}
+.AdminDashboard .dashboard-card h4 {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0;
+}
+
+.AdminDashboard .dashboard-buttons-container {
+    margin-top: 32px;
+    display: flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 16px;
+}
+
+.AdminDashboard .overview-container {
+    display: grid;
+    grid-template-columns: 200px 412px;
+    grid-template-rows: auto;
+    gap: 50px;
+}
+
+.AdminDashboard .overview-container .agency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 76px;
+    row-gap: 4px;
+    margin-top: 4px;
+    column-rule: 1px solid black;
+}
+
+.AdminDashboard .overview-container .agency-grid .agency-row {
+    display: grid;
+    grid-template-columns: 45px repeat(3, 35px);
+    grid-template-rows: auto;
+}
+
+.AdminDashboard .overview-container .agency-grid .agency-row .sum {
+    text-align: end;
+}
+
+.AdminDashboard .delete {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    margin: auto;
+    background: #FA6900;
+    color: #fff;
+    opacity: 0.3;
+  }
+
+  .AdminDashboard .delete:hover{
+    opacity: 1;
+  }
+  

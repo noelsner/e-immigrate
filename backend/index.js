@@ -1,4 +1,5 @@
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -11,13 +12,16 @@ const generateResponsesExcelRouter = require('./routes/generateResponsesExcel/ge
 
 require('dotenv').config();
 
+const MAX_EXCEL_FILE_SIZE = 50 * 1024 * 1024; //max size excel file in bytes will allow to be uploaded
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', 'build')));
+app.use(fileUpload({ limits: { fileSize: MAX_EXCEL_FILE_SIZE } }));
 
 const uri = process.env.MONGO_URI;
+console.log('connecting to', uri);
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useCreateIndex: true,

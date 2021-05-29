@@ -6,7 +6,8 @@ const questionnaireSchema = new Schema(
     {
         title: { type: String, required: false, unique: false },
         language: { type: String, required: false, unique: false },
-        flag: { type: String, required: false, unique: false },
+        flag: { type: Boolean, required: false, unique: false },
+        flagOverride: { type: Boolean, required: false, unique: false },
         emailSent: { type: Boolean, required: false, unique: false },
         agency: { type: String, required: false, unique: false },
         questionnaireResponse: { type: Object, required: true },
@@ -15,6 +16,7 @@ const questionnaireSchema = new Schema(
             required: false,
             unique: false,
         },
+        deleted: { type: Boolean, required: false, unique: false, default: false},
     },
     {
         timestamps: true,
